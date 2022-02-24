@@ -28,7 +28,7 @@ namespace Koodipaja
 
         public void TempMethod()
 		{
-            Debug.Log("hahahahahalol");
+            Debug.Log("Temporary thing");
             // This is a better version of the same method
 		}
     }
