@@ -25,5 +25,11 @@ namespace Koodipaja
             Destroy(gameObject);
             return score;
 		}
+
+        public void TempMethod()
+		{
+            Debug.Log("hahahahahalol");
+            // This is a better version of the same method
+		}
     }
 }
