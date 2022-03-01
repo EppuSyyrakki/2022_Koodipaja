@@ -7,6 +7,9 @@ namespace PeliprojektiExamples.Selection
 {
 	public class Selectable : MonoBehaviour, IPointerDownHandler
 	{
+		[SerializeField, Tooltip("Used as speed when moving this object to the touch position")]
+		private float maxDelta = 5f;
+
 		[SerializeField]
 		private string objectName;
 
@@ -48,14 +51,26 @@ namespace PeliprojektiExamples.Selection
 			SelectionSystem.Current.Selected = this;
 		}
 
-
-		/// <summary>
-		/// A very simple method to pass the target to another component.
-		/// </summary>
-		/// <param name="target"></param>
-		public void SetMoveTarget(Vector2 target)
+		// This is called by the SelectionSystem in Update depending on Input.
+		public void StartMovingTo(Vector3 target)
 		{
-			GetComponent<SelectionMove>().StartMovingTo(target);
+			StartCoroutine(Move(target));
+		}
+
+		private IEnumerator Move(Vector3 target)
+		{
+			// Vector2's and 3's are basically floating point numbers that shouldn't be compared with == or !=.
+			// However, Unity has overridden the 'equals' and 'not equals' operators on Vectors so that it returns 
+			// true on approximate matches.
+			while (transform.position != target)
+			{
+				// Any distance values in Update should be multiplied with the deltaTime
+				float delta = maxDelta * Time.deltaTime;
+				transform.position = Vector3.MoveTowards(transform.position, target, delta);
+				yield return null;
+			}
+
+			Debug.Log(gameObject.name + " reached target");
 		}
 	}
 }

@@ -65,7 +65,7 @@ namespace PeliprojektiExamples.Selection
 			if (touch.phase != TouchPhase.Ended) { return; }
 
 			Vector3 target = GetWorldPosition(touch.position);
-			selected.SetMoveTarget(target);
+			selected.StartMovingTo(target);
 		}
 
 		private static Vector3 GetWorldPosition(Vector3 touchPos)
