@@ -61,9 +61,9 @@ namespace PeliprojektiExamples.Selection
 
 			Touch touch = Input.GetTouch(0);
 
-			// only start moving once the finger is lifted (ensure only 1 move "order" per touch)
 			if (touch.phase != TouchPhase.Ended) { return; }
 
+			// Call to the current selected Selectable to start the coroutine to move it.
 			Vector3 target = GetWorldPosition(touch.position);
 			selected.StartMovingTo(target);
 		}
