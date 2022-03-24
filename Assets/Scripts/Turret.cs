@@ -59,7 +59,7 @@ namespace Koodipaja
                     // An enemy was killed so save the new amount to the registry. It would be better to do
                     // this operation only once, for example when a level is completed or at game over.
                     PlayerPrefs.SetInt(KEY_KILLED, enemiesKilled);
-                }  
+                }
             }
         }
 
