@@ -5,7 +5,12 @@ using UnityEngine;
 namespace Koodipaja
 {
 
-    public class Health : MonoBehaviour
+    public interface IHealth
+	{
+        bool TakeDamage();
+	}
+
+    public class Health : MonoBehaviour, IHealth
     {
         [SerializeField]
         private int health = 5;
@@ -29,6 +34,11 @@ namespace Koodipaja
 			}
 
             return false;
+		}
+
+        public void Foo()
+		{
+            Debug.Log("foo");
 		}
     }
 }

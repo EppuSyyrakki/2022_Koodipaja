@@ -52,7 +52,7 @@ namespace Koodipaja
                 // selected/on in the Game/Scene window.
                 Debug.DrawLine(transform.position, _target.position, Color.red, shootingInterval);
 
-                if (_target.GetComponent<Health>().TakeDamage())
+                if (_target.GetComponent<IHealth>().TakeDamage())
                 {
                     enemiesKilled++;
 

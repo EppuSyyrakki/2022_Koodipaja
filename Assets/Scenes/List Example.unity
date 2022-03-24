@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 117662787}
   - component: {fileID: 117662788}
   - component: {fileID: 117662789}
+  - component: {fileID: 117662790}
   m_Layer: 0
   m_Name: TinyDude (3)
   m_TagString: Enemy
@@ -156,12 +157,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55629cbef1112dc459e2eb28c7b8cc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 2.5
   waypoints:
   - {fileID: 722907530}
   - {fileID: 1922200345}
   - {fileID: 605981347}
   - {fileID: 1156827972}
+  - {fileID: 1922200345}
 --- !u!212 &117662785
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -287,6 +288,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
+--- !u!114 &117662790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117662783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8472d41eb9d64bc438d5acdce9a3b862, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultSpeed: 2
 --- !u!1 &297346037
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,6 +315,7 @@ GameObject:
   - component: {fileID: 297346041}
   - component: {fileID: 297346042}
   - component: {fileID: 297346043}
+  - component: {fileID: 297346044}
   m_Layer: 0
   m_Name: TinyDude (4)
   m_TagString: Enemy
@@ -320,7 +335,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55629cbef1112dc459e2eb28c7b8cc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 2.5
   waypoints:
   - {fileID: 1019866089}
   - {fileID: 722907530}
@@ -450,6 +464,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
+--- !u!114 &297346044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297346037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8472d41eb9d64bc438d5acdce9a3b862, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultSpeed: 2
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -814,6 +841,7 @@ GameObject:
   - component: {fileID: 1399965562}
   - component: {fileID: 1399965563}
   - component: {fileID: 1399965564}
+  - component: {fileID: 1399965565}
   m_Layer: 0
   m_Name: TinyDude (1)
   m_TagString: Enemy
@@ -833,7 +861,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55629cbef1112dc459e2eb28c7b8cc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 2.5
   waypoints:
   - {fileID: 543135642}
   - {fileID: 1791890789}
@@ -964,6 +991,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
+--- !u!114 &1399965565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399965558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8472d41eb9d64bc438d5acdce9a3b862, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultSpeed: 2
 --- !u!1 &1424569682
 GameObject:
   m_ObjectHideFlags: 0
@@ -1116,6 +1156,7 @@ GameObject:
   - component: {fileID: 1634633451}
   - component: {fileID: 1634633452}
   - component: {fileID: 1634633453}
+  - component: {fileID: 1634633454}
   m_Layer: 0
   m_Name: TinyDude (2)
   m_TagString: Enemy
@@ -1135,7 +1176,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55629cbef1112dc459e2eb28c7b8cc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 2.5
   waypoints:
   - {fileID: 1922200345}
   - {fileID: 605981347}
@@ -1266,6 +1306,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
+--- !u!114 &1634633454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634633447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8472d41eb9d64bc438d5acdce9a3b862, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultSpeed: 2
 --- !u!1 &1690058226
 GameObject:
   m_ObjectHideFlags: 0
@@ -1340,6 +1393,7 @@ GameObject:
   - component: {fileID: 1918407133}
   - component: {fileID: 1918407134}
   - component: {fileID: 1918407135}
+  - component: {fileID: 1918407136}
   m_Layer: 0
   m_Name: TinyDude (5)
   m_TagString: Enemy
@@ -1359,7 +1413,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55629cbef1112dc459e2eb28c7b8cc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 2.5
   waypoints:
   - {fileID: 1054746211}
   - {fileID: 1156827972}
@@ -1489,6 +1542,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
+--- !u!114 &1918407136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918407129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8472d41eb9d64bc438d5acdce9a3b862, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultSpeed: 2
 --- !u!1 &1922200344
 GameObject:
   m_ObjectHideFlags: 0
