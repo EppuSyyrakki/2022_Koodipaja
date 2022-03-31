@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Utils;
 
 namespace Koodipaja
 {
@@ -22,9 +23,17 @@ namespace Koodipaja
 
         private List<Transform> _targetsInRange;
         private Transform _target;
+        private Timer attackTimer;
+        private ParticleSystem particles;
+
+        private void Awake()
+        {
+            attackTimer = new Timer(shootingInterval);
+            particles = GetComponentInChildren<ParticleSystem>();
+        }
 
         private void Start()
-        {
+        {         
             // Retrieve the integer from PlayerPrefs (registry)
             enemiesKilled = PlayerPrefs.GetInt(KEY_KILLED);
 
@@ -36,7 +45,27 @@ namespace Koodipaja
             _targetsInRange = new List<Transform>();
 
             // The coroutine that handles 'attacking' the _target.
-            StartCoroutine(Attack());         
+            // StartCoroutine(Attack());         
+        }
+
+        private void OnEnable()
+        {
+            // No () after the method name as we don't want to actually run it, just make a reference to it
+            attackTimer.Alarm += TimedAttack;
+        }
+
+        private void OnDisable()
+        {
+            attackTimer.Alarm -= TimedAttack;
+        }
+
+        private void TimedAttack()
+        {
+            // Debug.Log("TimedAttack!");
+            
+            if (_target == null) { return; }
+          
+            particles.Emit(1);
         }
 
         private IEnumerator Attack()
@@ -65,6 +94,7 @@ namespace Koodipaja
 
         private void Update()
         {
+            attackTimer.Tick();
             _target = GetClosest();
 
             if (_target != null)
@@ -79,7 +109,7 @@ namespace Koodipaja
 
                 // We want to rotate along the Z (depth) axis.
                 Vector3 rotation = new Vector3(0, 0, angleToTarget * speed);
-                transform.Rotate(rotation);              
+                transform.Rotate(rotation);          
             }
         }
 
